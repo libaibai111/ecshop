@@ -5,8 +5,7 @@
 from selenium import webdriver
 import time
 from selenium.webdriver.common.by import By as by
-from selenium.webdriver.support.select import Select as select
-import get_name_email as gne
+from business import ecshop_common_get as gne
 
 #实例化浏览器对象
 driver = webdriver.Chrome()
