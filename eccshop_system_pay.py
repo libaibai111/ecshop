@@ -34,6 +34,7 @@ time.sleep(0.5)
 #    点击【进入管理中心】
 driver.find_element(By.CLASS_NAME,"button").click()
 time.sleep(1)
+print("登录成功")
 
 # 3、点击【系统设置】
 driver.switch_to.frame("menu-frame")  # 进入左侧的menu-frame
@@ -93,6 +94,7 @@ time.sleep(0.5)
 #    点击【确定】
 driver.find_element(By.XPATH,"/html/body/form/div/table/tbody/tr[10]/td/input[5]").click()  # 点击【确定】
 time.sleep(5)
+print("安装成功")
 
 # 6、编辑支付宝
 driver.find_element(By.XPATH,'//div[@id="listDiv"]/table/tbody/tr[2]/td[7]/a[2]').click()  # 点击编辑图标
@@ -104,17 +106,20 @@ time.sleep(0.5)
 #    点击【确定】
 driver.find_element(By.XPATH,"/html/body/form/div/table/tbody/tr[10]/td/input[5]").click()  # 点击【确定】
 time.sleep(5)
+print("编辑成功")
 
 # 7、卸载支付宝
 driver.find_element(By.XPATH,'//div[@id="listDiv"]/table/tbody/tr[2]/td[7]/a[1]').click()  # 点击卸载
 time.sleep(3)
 driver.switch_to.alert.accept()  # 确定删除
 time.sleep(5)
+print("卸载成功")
 
 # 8、退出
 driver.switch_to.default_content()  # 跳出最外层
 driver.switch_to.frame("header-frame")  # 进入顶部的header-frame
 driver.find_element(By.XPATH,'//div[@id="submenu-div"]/ul/li[1]/a/img').click()
 time.sleep(5)
+print("退出登录")
 
 driver.quit()
