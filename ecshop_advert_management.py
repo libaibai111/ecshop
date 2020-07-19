@@ -30,6 +30,7 @@ time.sleep(0.5)
 #    点击【进入管理中心】
 driver.find_element(By.CLASS_NAME,"button").click()
 time.sleep(2)
+print("登录成功")
 
 # 3、点击【广告管理】
 driver.switch_to.frame("menu-frame")  # 进入左侧的menu-frame
@@ -95,6 +96,7 @@ time.sleep(0.5)
 #    点击【确定】
 driver.find_element(By.XPATH,'//table[@id="general-table"]/tbody[6]/tr[5]/td[2]/input[1]').click()
 time.sleep(5)
+print("添加广告成功")
 
 # 6、生成并复制js代码
 driver.switch_to.parent_frame()  # 跳到上一层
@@ -120,6 +122,7 @@ time.sleep(0.5)
 #    回退上一页面
 driver.back()
 time.sleep(1)
+print("生成并复制js代码")
 
 # 7、点击编辑图标
 driver.switch_to.parent_frame()  # 跳到上一层
@@ -134,6 +137,7 @@ time.sleep(0.5)
 #    回退上一页面
 driver.back()
 time.sleep(1)
+print("编辑广告成功")
 
 # 8、点击移除图标
 driver.switch_to.parent_frame()  # 跳到上一层
@@ -143,12 +147,14 @@ time.sleep(3)
 #    点击【确定】
 driver.switch_to.alert.accept()
 time.sleep(3)
+print("移除广告成功")
 
 # 9、点击退出
 driver.switch_to.default_content()  # 跳出最外层
 driver.switch_to.frame("header-frame")  # 进入顶部的header-frame
 driver.find_element(By.XPATH,'//div[@id="submenu-div"]/ul/li[1]/a/img').click()  # 点击退出
 time.sleep(3)
+print("退出成功")
 
 driver.quit()
 
